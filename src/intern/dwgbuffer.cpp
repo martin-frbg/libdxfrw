@@ -533,9 +533,6 @@ dint32 dwgBuffer::getModularShort(){
 
 dwgHandle dwgBuffer::getHandle(){ //H
     dwgHandle hl; 
-    hl.code = 0;
-    hl.size = 0;
-    duint8 data =  0;
     data = getRawChar8();
     hl.code = (data >> 4) & 0x0F;
     hl.size = data & 0x0F;
